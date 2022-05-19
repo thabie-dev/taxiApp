@@ -27,10 +27,10 @@
         let addRoute
     </script>
 
-
+     <h1 class="notice">Notice: All taxis from the Joburg CBD will depart when they have 16 passengers</h1>
     <div class="back" x-data="{taxiData: $persist([
-    {destination: 'Meadowlands', queue:12, taxiCount:0, fare: 12.00, taxiFareTotal:0 },
-    {destination: 'Orlando West', queue:34, taxiCount:0, fare: 15.00, taxiFareTotal:0 },
+    {destination: 'Meadowlands', queue:40, taxiCount:0, fare: 12.00, taxiFareTotal:0 },
+    {destination: 'Orlando West', queue:16, taxiCount:0, fare: 15.00, taxiFareTotal:0 },
     {destination: 'Pimville', queue:23, taxiCount:0, fare: 10.00, taxiFareTotal:0, userDestination:0}
     ]),uDestination: '', uFare: ''}">
 
@@ -84,7 +84,7 @@
                             <template x-if="15>taxi.queue || 1 > taxi.taxiAvail">
                                 <div x-data="{ show: true }" x-show="show"
                                     x-init="setTimeout(() => show = false, 5000)">
-                                    <h1>No taxis available, please add</h1>
+                                    <h1 class="notice">No taxis available, please add</h1>
                                     <button class="noTaxi" type="button" disabled
                                         @click="taxi.queue=taxi.queue-passengers, taxi.taxiCount++, taxi.taxiFareTotal+=(taxi.fare*passengers), taxi.taxiAvail--">No Taxis</button>
                                 </div>
@@ -104,7 +104,7 @@
                         </td>
                         <td>
                             <strong><span x-text="taxi.taxiAvail"></span></strong>
-                            <button class="btn btn-dark btn-sm" @click="taxi.taxiAvail++">Add a taxi</button>
+                            <button class="btn button btn-sm" @click="taxi.taxiAvail++">Add a taxi</button>
                         </td>
                     </tr>
                 </template>

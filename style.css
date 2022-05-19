@@ -1,42 +1,51 @@
 body {
-    background:lightgoldenrodyellow;
+    background:lightcyan;
     font-family: arial, sans-serif;
-    background-color:lightcyan;
+    background-color:lightblue;
     font-size: 0.75em;
   }
 
   .heading {
     color: #0a0a09;
     text-align: center;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
   }
    .button{
       color:black;
       text-align: left;
-      background-color:yellow;
+      background-color:green;
   }
   .noTaxi{
     background-color: red;
     color: black;
   }
+  .notice{
+    color: red;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+  }
 
   .back{
-    background-color: #f5f4a5;
+    background-color: #dbf7ed;
   }
   
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
+    margin:auto;
   }
   
   td, th {
-    border: 1px solid #a59a61;
+    border: 1px solid #cac5b0;
     text-align: left;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddc9d;
+    background-color: #cff4f3;
   }
 
   .add{
