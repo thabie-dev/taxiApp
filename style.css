@@ -14,6 +14,10 @@ body {
       text-align: left;
       background-color:yellow;
   }
+  .noTaxi{
+    background-color: red;
+    color: black;
+  }
 
   .back{
     background-color: #f5f4a5;
@@ -33,6 +37,10 @@ body {
   
   tr:nth-child(even) {
     background-color: #dddc9d;
+  }
+
+  .add{
+    text-align: right;
   }
 
   @media (min-width: 768px) {
